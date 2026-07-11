@@ -28,14 +28,14 @@ Copy `.env.example` to `.env.local`:
 
 ```bash
 NEXT_PUBLIC_SUPABASE_URL=
-NEXT_PUBLIC_SUPABASE_ANON_KEY=
 NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
 SUPABASE_SERVICE_ROLE_KEY=
 OPENAI_API_KEY=
 OPENAI_MODEL=gpt-4.1-mini
 ```
 
-`NEXT_PUBLIC_SUPABASE_ANON_KEY` can be the legacy anon key or a Supabase publishable key. `SUPABASE_SERVICE_ROLE_KEY` is listed for deployment parity but the app does not use it; never expose it in browser code.
+`NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` is the preferred browser key. `NEXT_PUBLIC_SUPABASE_ANON_KEY` is optional legacy compatibility. `SUPABASE_SERVICE_ROLE_KEY` is listed for deployment parity but the app does not use it; never expose it in browser code.
 
 `OPENAI_API_KEY` is only used by server actions for AI mission generation. Do not prefix it with `NEXT_PUBLIC_`. `OPENAI_MODEL` is optional and defaults to `gpt-4.1-mini`.
 
@@ -152,8 +152,8 @@ Recommended VS Code flow:
 
 ```bash
 NEXT_PUBLIC_SUPABASE_URL
-NEXT_PUBLIC_SUPABASE_ANON_KEY
 NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+NEXT_PUBLIC_SUPABASE_ANON_KEY
 SUPABASE_SERVICE_ROLE_KEY
 OPENAI_API_KEY
 OPENAI_MODEL
